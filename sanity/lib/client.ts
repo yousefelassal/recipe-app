@@ -30,6 +30,7 @@ export async function getRecipes() {
         fraction,
       },
       instructions,
+      likes,
     }`
   )
 
