@@ -116,7 +116,7 @@ export default async function Home() {
 }
 
 async function getRecipies(){
-  const res = await fetch('https://www.themealdb.com/api/json/v1/1/random.php', {cache: "no-store"});
+  const res = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
   const data = await res.json();
   return data;
 }
