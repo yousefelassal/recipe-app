@@ -13,8 +13,8 @@ export async function getRecipes() {
     useCdn,
   })
 
-  client.fetch(
-    groq`*[_type == "recipe" && slug.current == $slug][0]{
+  return client.fetch(
+    groq`*[_type == "recipe"][0]{
       _id,
       _createdAt,
       name,
@@ -33,5 +33,4 @@ export async function getRecipes() {
       likes,
     }`
   )
-
 }
