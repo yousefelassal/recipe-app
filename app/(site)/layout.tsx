@@ -21,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + "min-h-screen"}>
         <NextTopLoader showSpinner={false} />
         <nav className="flex fixed top-0 items-center justify-between bg-teal-500 px-6 py-3 w-screen">
           <Link href="/">Recipes</Link>
