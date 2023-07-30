@@ -3,18 +3,11 @@ import {
   groq
 } from 'next-sanity'
 
-import { apiVersion, dataset, projectId, useCdn } from '../env'
 import { Recipe } from '@/types/Recipe'
+import clientConfig from '@/sanity/config/client-config'
 
 export async function getRecipes(): Promise<Recipe[]> {
-  const client = createClient({
-    apiVersion,
-    dataset,
-    projectId,
-    useCdn,
-  })
-
-  return client.fetch(
+  return createClient(clientConfig).fetch(
     groq`*[_type == "recipe"]{
       _id,
       _createdAt,
@@ -37,14 +30,7 @@ export async function getRecipes(): Promise<Recipe[]> {
 }
 
 export async function getRecipe(slug:string): Promise<Recipe>{
-  const client = createClient({
-    apiVersion,
-    dataset,
-    projectId,
-    useCdn,
-  })
-
-  return client.fetch(
+  return createClient(clientConfig).fetch(
     groq`*[_type == "recipe" && slug.current == $slug][0]{
       _id,
       _createdAt,
