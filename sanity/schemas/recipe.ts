@@ -83,9 +83,9 @@ export default{
                             unit:"unit",
                         },
                         prepare({
-                            title,
-                            subtitle,
-                            media,
+                            title = "No title",
+                            subtitle = "No subtitle",
+                            media = "No media",
                             wholeNumber = "(No whole number set)",
                             fraction = "(No fraction set)",
                             unit = "(No unit set)",
