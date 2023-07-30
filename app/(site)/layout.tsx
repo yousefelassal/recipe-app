@@ -22,18 +22,24 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className + "min-h-screen"}>
-        <NextTopLoader showSpinner={false} />
-        <nav className="flex fixed top-0 items-center justify-between bg-teal-500 px-6 py-3 w-screen">
+      <body className={inter.className + "min-h-screen bg-[#F6EDE7]"}>
+        <NextTopLoader showSpinner={false} color="#7D81E0" />
+        <nav className="flex fixed top-0 items-center justify-between px-12 py-4 w-screen">
           <Link href="/">
-            <Image src="/logo.png" width={100} height={50} alt="logo" priority />
+            <Image src="/logo.png" width={125} height={75} alt="logo" priority />
           </Link>
           <div className="flex gap-4">
+            <Link
+              href="/recipes"
+              className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+            >
+              Recipes
+            </Link>
             {pages.map((page) => (
               <Link 
                 href={`/${page.slug}`}
                 key={page._id}
-                className="hover:underline hover:underline-offset-2 text-gray-100 hover:text-gray-200"
+                className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
               >
                 {page.title}
               </Link>
