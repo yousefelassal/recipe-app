@@ -6,7 +6,7 @@ export default async function Nav(){
   const pages = await getPages();
 
     return(
-        <nav className="flex fixed top-0 items-center justify-between px-12 py-4 w-screen">
+        <nav className="flex fixed top-0 items-center justify-between px-12 py-4 w-screen z-50">
           <Link href="/">
             <Image src="/logo.png" width={125} height={75} alt="logo" priority />
           </Link>
