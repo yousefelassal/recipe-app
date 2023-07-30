@@ -8,6 +8,8 @@ export default async function Home() {
   console.log(data);
 
   return (
-    <div>recipes go here</div>
+    <div className="min-h-screen p-4 pt-12">
+      recipes go here
+    </div>
   )
 }

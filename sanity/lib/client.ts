@@ -14,7 +14,7 @@ export async function getRecipes() {
   })
 
   return client.fetch(
-    groq`*[_type == "recipe"][0]{
+    groq`*[_type == "recipe"]{
       _id,
       _createdAt,
       name,
