@@ -1,10 +1,15 @@
 import '../globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Chewy } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import Nav from '@/components/Nav'
 
-const inter = Inter({ subsets: ['latin'] })
+const carter = Chewy(
+  {
+    subsets: ['latin'],
+    weight: ['400'],
+  }
+)
 
 export const metadata: Metadata = {
   title: 'Recipes',
@@ -19,7 +24,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className + "min-h-screen bg-[#F6EDE7]"}>
+      <body className={carter.className}>
         <NextTopLoader showSpinner={false} color="#7D81E0" />
         <Nav />
         {children}
