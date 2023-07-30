@@ -27,7 +27,13 @@ export default async function RootLayout({
           <Link href="/">Recipes</Link>
           <div className="flex gap-4">
             {pages.map((page) => (
-              <Link href={`/${page.slug}`} key={page._id}>{page.title}</Link>
+              <Link 
+                href={`/${page.slug}`}
+                key={page._id}
+                className="hover:underline hover:underline-offset-2 text-gray-100 hover:text-gray-200"
+              >
+                {page.title}
+              </Link>
               ))}
           </div>
         </nav>
