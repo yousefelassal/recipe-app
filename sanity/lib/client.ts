@@ -4,8 +4,9 @@ import {
 } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
+import { Recipe } from '@/types/Recipe'
 
-export async function getRecipes() {
+export async function getRecipes(): Promise<Recipe[]> {
   const client = createClient({
     apiVersion,
     dataset,
@@ -23,7 +24,7 @@ export async function getRecipes() {
       "chef": chef->{
         name,
       },
-      "ingredients": ingredients[]{
+      "ingredients": ingredient[]{
         "name": ingredient->name,
         unit,
         wholeNumber,
