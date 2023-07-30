@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import Link from 'next/link'
 import { getPages } from '@/sanity/lib/client'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +25,9 @@ export default async function RootLayout({
       <body className={inter.className + "min-h-screen"}>
         <NextTopLoader showSpinner={false} />
         <nav className="flex fixed top-0 items-center justify-between bg-teal-500 px-6 py-3 w-screen">
-          <Link href="/">Recipes</Link>
+          <Link href="/">
+            <Image src="/logo.png" width={100} height={50} alt="logo" priority />
+          </Link>
           <div className="flex gap-4">
             {pages.map((page) => (
               <Link 
