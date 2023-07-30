@@ -13,7 +13,7 @@ export default async function Home() {
         <div key={recipe._id} className="w-52 h-48 rounded-lg border border-gray-600 flex flex-col gap-2 items-center overflow-hidden">
           <div className="w-full h-44 relative bg-gray-700 overflow-hidden">
           {recipe.image && (
-              <Image src={recipe.image} fill alt={"photo of " + recipe.name} />
+              <Image src={recipe.image} fill alt={"photo of " + recipe.name} className="object-cover"/>
               )}
           </div>
           {recipe.name}
