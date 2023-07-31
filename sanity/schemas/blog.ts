@@ -18,6 +18,12 @@ const blog = {
             },
         },
         {
+            name:"author",
+            title:"Author",
+            type:"reference",
+            to:[{type:"chef"}],
+        },
+        {
             name: "image",
             title: "Blog Image",
             type: "image",
