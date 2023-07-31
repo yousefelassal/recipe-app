@@ -14,6 +14,10 @@ body{
   @apply min-h-screen flex flex-col bg-[#F6EDE7];
 }
 
+p{
+  display: inline;
+}
+
 #handwritten {
   line-height: 21px;
   margin-top: 30px;
