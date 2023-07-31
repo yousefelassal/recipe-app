@@ -88,6 +88,10 @@ export async function getBlogs(): Promise<Blog[]> {
       "slug": slug.current,
       "image": image.asset->url,
       content,
+      "author": author->{
+        name,
+        "image": image.asset->url,
+      },
     }`
   )
 }
@@ -101,6 +105,10 @@ export async function getBlog(slug:string): Promise<Blog>{
       "slug": slug.current,
       "image": image.asset->url,
       content,
+      "author": author->{
+        name,
+        "image": image.asset->url,
+      },
     }`,
     { slug }
   )
