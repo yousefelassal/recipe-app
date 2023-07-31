@@ -1,14 +1,14 @@
 import '../globals.css'
 import type { Metadata } from 'next'
-import { Chewy } from 'next/font/google'
+import { Signika } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
-const carter = Chewy(
+const carter = Signika(
   {
     subsets: ['latin'],
-    weight: ['400'],
+    weight: ['300','400','600'],
   }
 )
 
