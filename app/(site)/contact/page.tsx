@@ -21,7 +21,7 @@ export default function Contact(){
 
                             <h2 className="mt-4 text-base font-medium text-gray-800">Email</h2>
                             <p className="mt-2 text-sm text-gray-500">Our friendly team is here to help.</p>
-                            <p className="mt-2 text-sm text-purple-500/80">hello@merakiui.com</p>
+                            <p className="mt-2 text-sm text-purple-500/80">hello@ayhaga.com</p>
                         </div>
 
                         <div>
