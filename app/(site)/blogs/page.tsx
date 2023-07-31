@@ -38,7 +38,7 @@ export default async function Blog() {
                         {blog.title}
                     </h3>
                 
-                    <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                    <div className="mt-2 line-clamp-3 h-16 text-sm/relaxed text-gray-500">
                         <PortableText value={blog.content} />
                     </div>
                 </div>
