@@ -1,5 +1,10 @@
 import { PortableTextBlock } from "sanity";
 
+type Author = {
+    name: string;
+    image: string;
+}
+
 export type Blog = {
     _id: string;
     _createdAt: Date;
@@ -7,5 +12,5 @@ export type Blog = {
     slug: string;
     content: PortableTextBlock[];
     image: string;
-    author: object;
+    author: Author;
 }
