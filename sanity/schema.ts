@@ -3,6 +3,7 @@ import chef from './schemas/chef'
 import ingredient from './schemas/ingredient'
 import recipe from './schemas/recipe'
 import page from './schemas/page'
+import blog from './schemas/blog'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -10,5 +11,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ingredient,
     recipe,
     page,
+    blog,
   ],
 }
