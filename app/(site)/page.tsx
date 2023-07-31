@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className='relative'>
             <div className='absolute inset-0 blur-xl h-[580px] -z-10' style={{ background: "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)" }}></div>
-            <div className='relative'>
+            <div className='relative px-6'>
                 <section>
                     <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
                         <div className='flex-none space-y-5 max-w-xl'>
