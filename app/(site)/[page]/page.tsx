@@ -21,7 +21,7 @@ export default async function Page({ params }: Props){
                     {page.title}
                 </h1>
             </header>
-            <div className="text-gray-200 text-lg flex flex-col gap-4">
+            <div className="text-gray-800 text-lg flex flex-col gap-4">
                 <PortableText value={page.content} />
             </div>
         </div>
