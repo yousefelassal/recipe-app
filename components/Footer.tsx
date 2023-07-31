@@ -19,7 +19,7 @@ export default function Footer(){
                         href="https://github.com/yousefelassal/recipe-app"
                         rel="noreferrer"
                         target="_blank"
-                        className="text-gray-700 transition hover:opacity-75"
+                        className="text-gray-700 transition hover:opacity-75 translate-y-2 lg:translate-y-0"
                         >
                         <span className="sr-only">GitHub</span>
 
