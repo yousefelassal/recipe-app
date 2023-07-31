@@ -9,7 +9,7 @@ export default async function Blog() {
     const blogs = await getBlogs();
 
     return (
-      <div className="bg-white py-24 sm:py-32">
+      <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our blogs</h2>
@@ -17,7 +17,7 @@ export default async function Blog() {
             Get Inspired with Our Blog Posts
             </p>
           </div>
-          <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-6 sm:mt-8 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-400/80 pt-6 sm:mt-8 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {blogs.map((blog) => (
             <Link key={blog._id} href={`/blogs/${blog.slug}`}>
             <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
