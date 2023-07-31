@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Chewy } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 
 const carter = Chewy(
   {
@@ -28,6 +29,7 @@ export default function RootLayout({
         <NextTopLoader showSpinner={false} color="#7D81E0" />
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   )
