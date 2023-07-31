@@ -13,19 +13,19 @@ export default async function Nav(){
           <div className="flex gap-4">
             <Link
               href="/recipes"
-              className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+              className="hover:underline hover:underline-offset-2 text-gray-600 hover:text-gray-900"
             >
               Recipes
             </Link>
             <Link
               href="/blogs"
-              className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+              className="hover:underline hover:underline-offset-2 text-gray-600 hover:text-gray-900"
             >
               Blogs
             </Link>
             <Link
               href="/contact"
-              className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+              className="hover:underline hover:underline-offset-2 text-gray-600 hover:text-gray-900"
             >
               Contact
             </Link>
@@ -33,7 +33,7 @@ export default async function Nav(){
               <Link 
                 href={`/${page.slug}`}
                 key={page._id}
-                className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+                className="hover:underline hover:underline-offset-2 text-gray-600 hover:text-gray-900"
               >
                 {page.title}
               </Link>
