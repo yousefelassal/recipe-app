@@ -11,7 +11,7 @@
 }
 
 body{
-  @apply min-h-screen bg-[#F6EDE7];
+  @apply min-h-screen flex flex-col bg-[#F6EDE7];
 }
 
 #handwritten {
