@@ -17,6 +17,12 @@ export default async function Nav(){
             >
               Recipes
             </Link>
+            <Link
+              href="/blogs"
+              className="hover:underline hover:underline-offset-2 text-gray-400 hover:text-gray-500"
+            >
+              Blogs
+            </Link>
             {pages.map((page) => (
               <Link 
                 href={`/${page.slug}`}
