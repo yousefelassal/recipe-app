@@ -32,6 +32,17 @@ export default{
             }
         },
         {
+            name:"category",
+            title:"Category",
+            options: {
+                list: [
+                    {value:"seafood",title:"Seafood"},
+                    {value:"meat",title:"Meat"},
+                    {value:"salad",title:"Salad"},
+                ]
+            }
+        },
+        {
             name:"ingredient",
             title:"Ingredient",
             type:"array",
