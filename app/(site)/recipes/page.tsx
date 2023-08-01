@@ -4,7 +4,7 @@ import Recipes from './recipes';
 export default async function RecipesPage() {
   const recipes = await getRecipes();
 
-  if(recipes.length === 0) return (
+  if(!recipes) return (
     <section className="pt-12">
       <div className="container px-4 sm:px-6 lg:px-12 py-10 mx-auto animate-pulse">
           <h1 className="w-48 h-2 bg-gray-200 rounded-lg "></h1>
