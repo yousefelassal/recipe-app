@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, JSX, SVGProps, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import ToggleSwitch from './ToggleSwitch'
 
@@ -63,7 +63,6 @@ export default function Dropdown({name, options}: {name: string, options: string
                         <ToggleSwitch
                             name={option}
                             enabled={enabled[index].enabled}
-                            setEnabled={setEnabled}
                             handleEnabled={handleEnabled(option)}
                         />
                     </button>
@@ -75,23 +74,5 @@ export default function Dropdown({name, options}: {name: string, options: string
         </Transition>
       </Menu>
     </div>
-  )
-}
-
-function EditInactiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#EDE9FE"
-        stroke="#A78BFA"
-        strokeWidth="2"
-      />
-    </svg>
   )
 }
