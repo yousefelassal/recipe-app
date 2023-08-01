@@ -1,25 +1,8 @@
-'use client'
-
-import Image from 'next/image'
-import Link from 'next/link';
-import Dropdown from '@/components/Dropdown';
 import { getRecipes } from '@/sanity/lib/client';
-import { useEffect, useState } from 'react';
-import { Recipe } from '@/types/Recipe';
+import Recipes from './recipes';
 
-export default function Home() {
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-
-  useEffect(() => {
-    const fetchRecipes: () => Promise<Recipe[]>
-      = async () => {
-        const recipes = await getRecipes();
-
-        return recipes;
-    }
-
-    fetchRecipes().then((recipes) => setRecipes(recipes));
-  }, []);
+export default async function RecipesPage() {
+  const recipes = await getRecipes();
 
   if(recipes.length === 0) return (
     <section className="pt-12">
@@ -104,36 +87,7 @@ export default function Home() {
             Browse and sort our collection of recipes, get step-by-step instructions and photos for every recipe.
           </p>
         </header>
-
-        <div className="mt-8 flex items-center justify-between">
-          <div className="flex">
-            <Dropdown name="Filter" options={['shika','bala']} />
-          </div>
-        </div>
-
-        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 list-none">
-          {recipes.map((recipe) => (
-            <li key={recipe._id}>
-              <Link href={`/recipes/${recipe.slug}`} className="group grid place-content-center overflow-hidden bg-white/30 rounded-lg">
-                <Image
-                  src={recipe.image}
-                  alt={recipe.name}
-                  width={250}
-                  height={250}
-                  className="transition duration-500 group-hover:scale-105"
-                />
-
-                <div className="relative pt-3">
-                  <h3
-                    className="text-center pb-1 text-gray-700 group-hover:underline group-hover:underline-offset-4"
-                  >
-                    {recipe.name}
-                  </h3>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Recipes recipes={recipes} />        
       </div>
     </section>
   )

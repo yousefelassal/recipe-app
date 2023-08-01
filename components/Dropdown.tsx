@@ -3,29 +3,7 @@ import { Fragment, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import ToggleSwitch from './ToggleSwitch'
 
-export default function Dropdown({name, options}: {name: string, options: string[]}) {
-    const [enabled, setEnabled] = useState(options.map((option) => {
-        return {
-            name: option,
-            enabled: false,
-            }
-        })
-    );
-
-    const handleEnabled = (option: string) => {
-        return () => {
-            setEnabled(enabled.map((item) => {
-                if(item.name === option) {
-                    return {
-                        name: option,
-                        enabled: !item.enabled,
-                    }
-                } else {
-                    return item;
-                }
-            }))
-        }
-    }
+export default function Dropdown({name, options, enabled, handleEnabled}: {name: string, options: string[], enabled: any, handleEnabled: any}) {
     
   return (
     <div className="text-right">
