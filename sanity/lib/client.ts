@@ -19,6 +19,7 @@ export async function getRecipes(): Promise<Recipe[]> {
       "chef": chef->{
         name,
       },
+      category,
       "ingredients": ingredient[]{
         "name": ingredient->name,
         unit,
@@ -42,6 +43,7 @@ export async function getRecipe(slug:string): Promise<Recipe>{
       "chef": chef->{
         name,
       },
+      category,
       "ingredients": ingredient[]{
         "name": ingredient->name,
         unit,
