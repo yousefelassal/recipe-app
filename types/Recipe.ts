@@ -10,4 +10,5 @@ export type Recipe = {
     likes: number;
     slug: string;
     image: string;
+    category: string;
 }
