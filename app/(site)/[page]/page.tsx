@@ -12,7 +12,7 @@ export default async function Page({ params }: Props){
     const page = await getPage(slug);
 
     return (
-        <div className="pt-20 px-4 lg:px-36 flex flex-col gap-8 mb-2">
+        <div className="pt-20 pb-24 px-4 lg:px-36 flex flex-col gap-8 mb-2">
             <header>
                 <h1 
                     className="text-5xl bg-gradient-to-r from-orange-600 via-red-500 to-purple-600 
