@@ -1,12 +1,10 @@
-'use client'
-
 import '../globals.css'
 import type { Metadata } from 'next'
 import { Signika } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { AnimatePresence } from 'framer-motion'
+import PresenceAnimation from '@/components/PresenceAnimation'
 
 const carter = Signika(
   {
@@ -31,9 +29,9 @@ export default function RootLayout({
       <body className={carter.className}>
         <NextTopLoader showSpinner={false} color="#7D81E0" />
         <Nav />
-        <AnimatePresence mode="wait">
+        <PresenceAnimation>
           {children}
-        </AnimatePresence>
+        </PresenceAnimation>
         <Footer />
       </body>
     </html>
