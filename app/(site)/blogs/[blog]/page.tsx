@@ -18,16 +18,15 @@ export default async function Blog({ params }: Props) {
       <section className="cta-sec relative pt-20 max-w-screen-xl mx-auto py-4 px-4 md:px-8">
             <div className="absolute top-0 left-0 w-full h-full opacity-40"></div>
             <div className="relative z-10 gap-5 items-center flex flex-col">
-                <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+                <div className="flex-1 mt-5 mx-auto w-full h-36 sm:w-9/12 lg:mt-0 lg:w-screen lg:h-64 absolute">
                     <Image 
                         src={blog.image} 
                         alt={blog.title}
-                        width={1280}
-                        height={900}
-                        className="w-full rounded-lg border-b border-gray-200 shadow-xl"
+                        fill
+                        className="rounded-lg lg:rounded-none border-b border-gray-200 shadow-xl object-cover"
                     />
                 </div>
-                <div className="flex justify-start w-full gap-3 items-center lg:px-48 sm:px-16 md:px-32 px-4">
+                <div className="flex justify-start w-full gap-3 items-center lg:mt-72 lg:px-48 sm:px-16 md:px-32 px-4">
                   <div className="rounded-full w-16 h-16 overflow-hidden">
                   <Image 
                         src={blog.author.image} 
