@@ -18,11 +18,15 @@ export async function GET(request: NextRequest, res: any) {
     const requestBody = await request.text()
     const parsedBody = JSON.parse(requestBody)
 
+    console.log(`==== Parsed body: ${JSON.stringify(parsedBody)}`)
+
     const mainPath = parsedBody._type === 'recipe' ? '/recipes'
      : parsedBody._type === 'page' ? '/pages' 
      : parsedBody._type === 'blog' ? '/blogs'
      : ''
     
+    console.log(mainPath)
+
     const pathToRevalidate = parsedBody._type === 'recipe' ? `/recipes/${parsedBody.slug?.current}` 
      : parsedBody._type === 'page' ? `/pages/${parsedBody.slug?.current}`
      : parsedBody._type === 'blog' ? `/blogs/${parsedBody.slug?.current}`
