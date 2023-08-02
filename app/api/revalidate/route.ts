@@ -1,31 +1,16 @@
-import { isValidSignature, SIGNATURE_HEADER_NAME } from '@sanity/webhook';
-
-const SANITY_WEBHOOK_SECRET = "07775000";
-
-export default async function handler(req: any, res: any) {
-  const signature = req.headers[SIGNATURE_HEADER_NAME];
-  const isValid = isValidSignature(JSON.stringify(req.body), signature, SANITY_WEBHOOK_SECRET);
-
-  console.log(`===== Is the webhook request valid? ${isValid}`);
-
-  // Validate signature
-  if (!isValid) {
-    res.status(401).json({ success: false, message: 'Invalid signature' });
-    return;
+import { NextRequest, NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
+ 
+// e.g a webhook to `your-website.com/api/revalidate?tag=collection&secret=<token>`
+export async function GET(request: NextRequest) {
+  // Check for secret to confirm this is a valid request
+  if (
+    request.nextUrl.searchParams.get('secret') !== "07775000"
+  ) {
+    return res.status(401).json({ message: 'Invalid token' })
   }
-
-  try {
-    const pathToRevalidate = req.body.slug.current;
-
-    console.log(`===== Revalidating: ${pathToRevalidate}`);
-
-    await res.revalidate(pathToRevalidate);
-
-    return res.json({ revalidated: true });
-  } catch (err) {
-    // Could not revalidate. The stale page will continue to be shown until
-    // this issue is fixed.
-    return res.status(500).send('Error while revalidating');
-  }
+ 
+  const tag = request.nextUrl.searchParams.get('tag')
+  revalidateTag(tag)
+  return NextResponse.json({ revalidated: true, now: Date.now() })
 }
-
