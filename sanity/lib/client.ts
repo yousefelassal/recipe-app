@@ -28,7 +28,11 @@ export async function getRecipes(): Promise<Recipe[]> {
       },
       instructions,
       likes,
-    }`
+    }`, {
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
 
@@ -53,7 +57,11 @@ export async function getRecipe(slug:string): Promise<Recipe>{
       instructions,
       likes,
     }`,
-    { slug }
+    { slug,
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
 
@@ -64,7 +72,11 @@ export async function getPages(): Promise<Page[]> {
       _createdAt,
       title,
       "slug": slug.current,
-    }`
+    }`, {
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
 
@@ -77,7 +89,11 @@ export async function getPage(slug:string): Promise<Page>{
       "slug": slug.current,
       content,
     }`,
-    { slug }
+    { slug,
+      next: {
+        revalidate: 60,
+      }
+     }
   )
 }
 
@@ -94,7 +110,11 @@ export async function getBlogs(): Promise<Blog[]> {
         name,
         "image": image.asset->url,
       },
-    }`
+    }`, {
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
 
@@ -112,6 +132,10 @@ export async function getBlog(slug:string): Promise<Blog>{
         "image": image.asset->url,
       },
     }`,
-    { slug }
+    { slug, 
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
