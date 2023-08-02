@@ -34,6 +34,7 @@ export default{
         {
             name:"category",
             title:"Category",
+            type:"string",
             options: {
                 list: [
                     {value:"seafood",title:"Seafood"},
