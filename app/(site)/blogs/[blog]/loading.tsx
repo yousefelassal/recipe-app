@@ -5,8 +5,8 @@ export default function loading() {
         <div className="flex justify-start w-full gap-3 items-center mt-40 sm:mt-52 lg:mt-72 lg:px-48 sm:px-16 md:px-32 px-4">
             <div className="rounded-full w-16 h-16 overflow-hidden bg-gray-300"></div>
             <div className="flex flex-col gap-1">
-                <p className="w-56 h-2 mt-4 bg-gray-200 rounded-lg"></p>
-                <p className="w-48 h-1 mt-6 bg-gray-200 rounded-lg"></p>
+                <p className="w-24 h-2 mt-4 bg-gray-200 rounded-lg"></p>
+                <p className="w-16 h-1 mt-6 bg-gray-200 rounded-lg"></p>
             </div>
         </div>
         <div className="flex-1 w-full py-5 sm:mx-auto lg:text-left lg:px-48 px-4">
