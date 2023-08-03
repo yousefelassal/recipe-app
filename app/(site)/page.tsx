@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import Testimonials from './testimonials';
+import { getClients } from '@/sanity/lib/client';
 
-export default function Home() {
+export default async function Home() {
+    const clients = await getClients();
 
     return (
         <div className='relative'>
@@ -48,6 +51,7 @@ export default function Home() {
                     </div>
                 </section>
             </div>
+           <Testimonials clients={clients} />
         </div>
     )
 }
