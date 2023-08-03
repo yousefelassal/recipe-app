@@ -23,9 +23,8 @@ const client = {
         },
         {
             name: 'testimony',
-            title: 'testimony',
-            type: 'array',
-            of: [{ type: 'block' }],
+            title: 'Testimony',
+            type: 'string',
         },
     ],
 }

@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image';
-import { PortableText } from '@portabletext/react'
 import { useState } from 'react';
 import { Client } from '@/types/Client';
 
