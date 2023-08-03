@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import Testimonials from './testimonials';
+import Testimonials from './Testimonials';
 import { getClients } from '@/sanity/lib/client';
 
 export default async function Home() {
