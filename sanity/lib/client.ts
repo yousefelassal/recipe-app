@@ -6,6 +6,7 @@ import {
 import { Recipe } from '@/types/Recipe'
 import { Page } from '@/types/Page'
 import { Blog } from '@/types/Blog'
+import { Client } from '@/types/Client'
 import clientConfig from '@/sanity/config/client-config'
 
 export async function getRecipes(): Promise<Recipe[]> {
@@ -135,6 +136,23 @@ export async function getBlog(slug:string): Promise<Blog>{
     { slug,
       next: {
         tags: ['blog']
+      }
+    }
+  )
+}
+
+export async function getClients(): Promise<Client[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "client"]{
+      _id,
+      _createdAt,
+      name,
+      "image": image.asset->url,
+      job,
+      testimony,
+    }`,{
+      next: {
+        tags: ['client']
       }
     }
   )
