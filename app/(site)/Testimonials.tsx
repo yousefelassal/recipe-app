@@ -88,7 +88,7 @@ export default function Testimonials({clients}: {clients: Client[]}) {
                             <p className="text-indigo-200 ">{client.job}</p>
                         </div>
 
-                        <p className="mt-4 text-lg h-52 md:h-48 leading-relaxed text-white md:text-xl"> “{client.testimony}”.</p>
+                        <p className="mt-4 text-lg h-52 md:h-48 leading-relaxed text-white md:text-xl"> “{client.testimony}”</p>
 
                         <div className="flex items-center justify-between mt-6 md:justify-start">
                             <button 
