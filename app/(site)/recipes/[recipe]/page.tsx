@@ -1,6 +1,7 @@
 import { getRecipe } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react'
 import Image from 'next/image';
+import styles from '@/styles/recipes.module.css'
 
 type Props = {
     params: {
@@ -27,7 +28,7 @@ export default async function Recipe({params}: Props){
             </div>
             <div className="flex-1 text-center mt-7 lg:mt-0 lg:ml-3">
             <div className="space-y-4 flex-1 sm:text-center lg:text-left">
-                <div className="flex flex-col gap-2" id="handwritten">
+                <div className={styles.handwritten}>
                     <PortableText value={recipe.instructions} />
                 </div>
             </div>
