@@ -26,7 +26,7 @@ const Icons = () => (
     </svg>
     </MarqueeElement>
     <MarqueeElement>
-        <Image src="/room-finder-dark.png" alt="Room Finder" className="w-28 my-auto" width="112" height="60"/>
+        <Image priority src="/room-finder-dark.png" alt="Room Finder" className="w-28 my-auto" width="112" height="60"/>
     </MarqueeElement>
     <MarqueeElement>
     <svg className="w-28 my-auto" viewBox="0 0 164 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@ const Icons = () => (
     </svg>
     </MarqueeElement>
     <MarqueeElement>
-        <Image src="/todo-dark.png" alt="Todo App" className="w-28 my-auto" width="112" height="60"/>
+        <Image priority src="/todo-dark.png" alt="Todo App" className="w-28 my-auto" width="112" height="60"/>
     </MarqueeElement>
     <MarqueeElement>
     <svg className="w-28 my-auto" viewBox="0 0 100 48" fill="none" xmlns="http://www.w3.org/2000/svg">
