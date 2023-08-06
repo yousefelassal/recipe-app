@@ -16,7 +16,7 @@ const Card = ({ icon, title, desc }: { icon: JSX.Element, title: string, desc: s
         dragElastic={0.18}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
         whileTap={{ cursor: 'grabbing' }}
-        className='bg-white space-y-3 rounded-lg hover:cursor-grab backdrop-blur-lg
+        className='bg-white space-y-3 z-20 rounded-lg hover:cursor-grab backdrop-blur-lg
         [ p-4 ]
         [ bg-gradient-to-b from-white/60 to-white/30 ]
         [ border-[1px] border-solid border-white border-opacity-30 ]

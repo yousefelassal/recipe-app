@@ -30,10 +30,10 @@ export default function Features() {
     ]
 
     return (
-        <section className="py-14 overflow-hidden">
+        <section className="py-14 lg:pb-16 overflow-hidden">
             <div className="max-w-screen-xl mx-auto px-6 text-gray-600 md:px-8">
                 <div className="relative max-w-2xl mx-auto sm:text-center">
-                    <div className="relative z-10">
+                    <div className="relative">
                         <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                             The Ultimate Cooking Experience
                         </h3>
