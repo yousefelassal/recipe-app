@@ -12,7 +12,7 @@
   <tr>
     <td align="center"><a href="https://nextjs.org/"><img src="https://github.com/yousefelassal/recipe-app/assets/76617202/1dd1f8a5-1510-4669-871d-d6a1319d9bae" width="50px" height="50px"></a></td>
     <td align="center"><a href="https://www.sanity.io/"><img src="https://github.com/yousefelassal/recipe-app/assets/76617202/0b9c8a51-7dde-4695-8f80-42811d2442a3" width="50px" height="50px"></a></td>
-    <td align="center"><a href="https://tailwindcss.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" width="50px" height="50px"></a></td>
+    <td align="center"><a href="https://tailwindcss.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" width="50px" height="35px"></a></td>
     <td align="center"><a href="https://vercel.com/"><img src="https://logowik.com/content/uploads/images/vercel1868.jpg" width="70px" height="50px"></a></td>
   </tr>
   <tr>
