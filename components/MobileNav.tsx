@@ -67,7 +67,7 @@ export default function Navbar({ pages }: Props) {
                     <div className={`${styles.bars} ${styles.bar3}`}></div>
                 </label>
         </nav>
-            <div className={`${isChecked ? 'flex flex-col translate-x-0 z-40' : 'hidden translate-x-24'} bg-[#F6EDE7] fixed p-6 pt-24 inset-0 transition-all ease-in-out gap-4`} role="dialog" aria-modal="true">
+            <div className={`${isChecked ? 'flex flex-col z-40' : 'hidden'} bg-[#F6EDE7] ${styles.navAnimation} fixed p-6 pt-24 inset-0 transition-all ease-in-out gap-4`} role="dialog" aria-modal="true">
                 {navigation.map((item) => (
                     <Link 
                         href={item.href}
