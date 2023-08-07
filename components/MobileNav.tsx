@@ -4,12 +4,14 @@ import Image from 'next/image'
 import { Page } from '@/types/Page'
 import { usePathname } from 'next/navigation'
 import styles from '@/styles/nav.module.css'
+import { useState } from 'react'
 
 type Props = {
     pages: Page[]
 }
 
 export default function Navbar({ pages }: Props) {
+    const [isChecked, setIsChecked] = useState(false);
     const path = usePathname();
     const isActive = (slug: string) => slug === path;
 
@@ -39,6 +41,9 @@ export default function Navbar({ pages }: Props) {
 
     const navigation = [...nav, ...pagesNav]
     
+    const toggle = () => {
+        setIsChecked(!isChecked);
+    }
 
   return (
     <>
@@ -46,14 +51,18 @@ export default function Navbar({ pages }: Props) {
             <Link href="/">
                 <Image src="/logo.png" width={125} height={75} alt="logo" priority />
             </Link>
-            <button>
-            <input type="checkbox" className={styles.checkbox} id="checkbox" />
+            <input 
+                type="checkbox"
+                className={styles.checkbox}
+                id="checkbox"
+                checked={isChecked}
+                onChange={toggle}
+            />
                 <label htmlFor="checkbox" className={styles.toggle}>
                     <div className={`${styles.bars} ${styles.bar1}`}></div>
                     <div className={`${styles.bars} ${styles.bar2}`}></div>
                     <div className={`${styles.bars} ${styles.bar3}`}></div>
                 </label>
-            </button>
         </nav>
             <div className="hidden gap-4" role="dialog" aria-modal="true">
                 {navigation.map((item) => (
