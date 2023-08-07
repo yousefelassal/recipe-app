@@ -48,12 +48,15 @@ export default function Navbar({ pages }: Props) {
   return (
     <>
         <nav className="flex md:hidden fixed top-0 items-center justify-between px-6 pt-4 pb-1 w-screen z-50 backdrop-blur-sm">
-            <Link href="/">
+            <Link 
+                href="/"
+                onClick={() => setIsChecked(false)}
+            >
                 <Image src="/logo.png" width={125} height={75} alt="logo" priority />
             </Link>
             <input 
                 type="checkbox"
-                className={styles.checkbox}
+                className={`${styles.checkbox} z-[100]`}
                 id="checkbox"
                 checked={isChecked}
                 onChange={toggle}
@@ -64,12 +67,13 @@ export default function Navbar({ pages }: Props) {
                     <div className={`${styles.bars} ${styles.bar3}`}></div>
                 </label>
         </nav>
-            <div className="hidden gap-4" role="dialog" aria-modal="true">
+            <div className={`${isChecked ? 'flex flex-col translate-x-0 z-40' : 'hidden translate-x-24'} bg-[#F6EDE7] fixed p-6 pt-24 inset-0 transition-all ease-in-out gap-4`} role="dialog" aria-modal="true">
                 {navigation.map((item) => (
                     <Link 
                         href={item.href}
                         key={item.name}
-                        className={`${item.current ? 'text-indigo-600' : 'text-gray-600 hover:text-gray-950'} relative transition-colors`}
+                        className={`${item.current ? 'text-indigo-600' : 'text-gray-600 hover:text-gray-950'} relative text-2xl transition-colors`}
+                        onClick={() => setIsChecked(false)}
                     >
                         {item.name}
                     </Link>
