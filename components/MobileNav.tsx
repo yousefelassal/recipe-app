@@ -52,7 +52,14 @@ export default function Navbar({ pages }: Props) {
                 href="/"
                 onClick={() => setIsChecked(false)}
             >
-                <Image src="/logo.png" width={125} height={75} alt="logo" priority />
+                <Image 
+                    src="/logo.png"
+                    width={125}
+                    height={75}
+                    alt="logo"
+                    priority
+                    className={`${isChecked && 'scale-110'} transition-transform`}
+                />
             </Link>
             <input 
                 type="checkbox"
